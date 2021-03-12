@@ -4,107 +4,107 @@
     --hr-color: #2629ac;
     --red: #e74c3c;
 }
-
-*{
-    margin:0;
+* {
+    margin: 0;
     padding: 0;
-}
-
-ul{
+  }
+  
+  ul {
     list-style: none;
-}
-
-a{
-    color:inherit;
+  }
+  
+  a {
+    color: inherit;
     text-decoration: none;
-}
-
-body{
-
+  }
+  
+  body {
     margin: 30px 0;
     font: 22px sans-serif;
     background: var(--body-bg-color);
-    color:var(--text-color);
-}
-
-.menu{
-    display: flex;
-    justify-c   ontent: center;
-}
-
-hr{
+    color: var(--text-color);
+  }
+  
+  hr {
     border-color: var(--hr-color);
-    margin:20px 0;
-}
-
-.menu li{
+    margin: 20px 0;
+  }
+  
+  .menu {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .menu li {
     margin-right: 70px;
-}
-
-.menu a{
+  }
+  
+  .menu a {
     position: relative;
     display: block;
     overflow: hidden;
-}
-
-.menu a span{
+  }
+  
+  .menu a span {
     transition: transform 0.2s ease-out;
-}
-
-.menu a span:first-child{
+  }
+  
+  .menu a span:first-child {
     display: inline-block;
     padding: 10px;
-}
-
-.menu a span:last-child{
+  }
+  
+  .menu a span:last-child {
     position: absolute;
-    top:0;
+    top: 0;
     right: 0;
     bottom: 0;
-    left:0;
+    left: 0;
     display: flex;
     align-items: center;
     justify-content: center;
     transform: translateY(-100%);
-}
-
-.menu i{
+  }
+  
+  .menu i {
     font-size: 30px;
-}
-
-.menu a:hover span:first-child{
+  }
+  
+  .menu a:hover span:first-child {
     transform: translateY(100%);
-}
-
-.menu a:hover span:first-child, 
-.menu[data-animation] a:hover span:last-child{
+  }
+  
+  .menu a:hover span:last-child,
+  .menu[data-animation] a:hover span:last-child {
     transform: none;
-}
-
-/*animaciones*/
-.menu[data-animation="to-top"] a span:last-child{
+  }
+  
+  /* ANIMATIONS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+  .menu[data-animation="to-top"] a span:last-child {
     transform: translateY(100%);
-}
-
-.menu[data-animation="to-top"] a:hover span:first-child{
+  }
+  
+  .menu[data-animation="to-top"] a:hover span:first-child {
     transform: translateY(-100%);
-}
-
-.menu[data-animation="to-right"] a span:last-child{
+  }
+  
+  .menu[data-animation="to-right"] a span:last-child {
     transform: translateX(-100%);
-}
-
-.menu[data-animation="to-right"] a:hover span:first-child{
+  }
+  
+  .menu[data-animation="to-right"] a:hover span:first-child {
     transform: translateX(100%);
-}
-
-.menu[data-animation="to-left"] a span:last-child{
+  }
+  
+  .menu[data-animation="to-left"] a span:last-child {
     transform: translateX(100%);
-}
-
-.menu[data-animation="to-left"] a:hover span:first-child{
+  }
+  
+  .menu[data-animation="to-left"] a:hover span:first-child {
     transform: translateX(-100%);
-}
+  }
+  
 
 .page-footer{
     position: absolute;
