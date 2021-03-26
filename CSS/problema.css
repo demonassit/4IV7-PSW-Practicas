@@ -1,0 +1,25 @@
+.td_up{
+    align-items: left;
+    justify-content: left;
+    width: 100;
+}
+
+.td_down{
+    align-items: center;
+    justify-content: center;
+    width: 150;
+}
+
+.input_text{
+    size: 12;
+    border-width: 2px;
+    border-style: solid;
+    font-size: 10;
+    color: #5214ff;
+    letter-spacing: 3px;
+}
+
+*{
+    background-color: #85deff;
+    color: #5214ff;
+}
