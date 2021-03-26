@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problema 1</title>
+    <link rel="stylesheet" href="./CSS/problema.css">
+    <script src="./JS/problema01.js" ></script>
+</head>
+<body>
+
+    <p>
+        Se desea programar un formulario el cual sea capaz 
+        de calcular el interes al 2% mensual, sobre un capital
+        a invertir.
+
+    </p>
+
+    <form name="formulario" method="get" action="problema01.html">
+        <table align="center" border="1";" >
+            <tr>
+                <td class="td_up" >Introduce la cantidad a invertir : $</td>
+                <td class="td_down" > <input type="text" name="cantidad"
+                onkeypress=""> </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td class="td_down"> <input type="button" value="Interes"
+                    name="enviar" onclick=""> </td>
+            </tr>
+            <tr>
+                <td class="td_up" >Su saldo total con interés del 2% mensual es de:</td>
+                <td class="td_down"> <input type="text" name="sueldoti"
+                    id="cantidadti" readonly="readonly" 
+                    class="input_text"> </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td class="td_down"> <input type="button" name="borrar" 
+                    value="Borrar" onclick=""> </td>
+            </tr>
+        </table>
+    </form>
+    
+</body>
+</html>
