@@ -1,0 +1,133 @@
+<html>
+  <head>
+  <style type="text/css">
+body{
+  background-color: black;
+
+}
+.canvas-container{
+  margin: 0 auto;
+  width: 1222px;
+}
+.canvas-container:after{
+  content:"";
+  display: table;
+  clear: both;
+}
+canvas{
+  /* padding-left:100px; */
+  float:left;
+}
+table{
+
+  float:left;
+}
+.hidden{
+  visibility: hidden;
+}
+.found{
+  visibility: visible;
+  -webkit-transforms: scale(1);
+  transform: scale(1);
+  -webkit-transition: .3 ease-in-out;
+  transition: .3 ease-in-out;
+}
+.found:hover{
+  -webkit-transform: scale(1);
+  transform: scale(1.2);
+}
+
+#video1{
+  display: none;
+  z-index: 2;
+  position: relative;
+}
+
+
+  </style>
+
+  <meta charset="UTF-8">
+
+</head>
+  <body>
+
+    <div class="canvas-container">
+      <canvas id="myCanvas" width="1020" height="580" style="border:1px solid #000000;"></canvas>
+
+      <!-- Inventory Bar-->
+      <table id="table" width="100" height="580"  background="images/InventoryBar2.png">
+        <tr>
+          <td  align="center"><img id="item0" class="hidden" draggable="true" ondrag="inventory(this)" src='images/Hacksaw.png'></td>
+        </tr>
+        <tr>
+          <td  align="center"><img id="item1" class="hidden" draggable="true" ondrag="inventory(this)" src='images/Hammer.png'></td>
+        </tr>
+        <tr>
+          <td  align="center"><img id="item2" class="hidden" draggable="true" ondrag="inventory(this)" src='images/hatchet.png'></td>
+        </tr>
+        <tr>
+          <td  align="center"><img  id="item3" class="hidden" draggable="true" ondrag="inventory(this)" src='images/key3.png'></td>
+        </tr>
+        <tr>
+          <td  align="center"><img id="item4" class="hidden" draggable="true" ondrag="inventory(this)" src='images/key2.png'></td>
+        </tr>
+        <tr>
+          <td  align="center"><img id="item5" class="hidden" draggable="true" ondrag="inventory(this)" src='images/key1.png'></td>
+        </tr>
+        <tr>
+          <td  align="center"><img id="item6" class="hidden" draggable="true" ondrag="inventory(this)" src='images/FinalKey.png'></td>
+        </tr>
+      </table>
+    </div>
+    <div class="hidden" id="countdown"></div>
+
+   <audio loop id="sound1" src="sounds/tv-static-04.mp3" ></audio>
+   <audio id="note1" src="sounds/68437_pinkyfinger_piano-a.mp3" ></audio>
+   <audio id="note2" src="sounds/68438_pinkyfinger_piano-b.mp3" ></audio>
+   <audio id="note3" src="sounds/68440_pinkyfinger_piano-c.mp3" ></audio>
+   <audio id="note4" src="sounds/68442_pinkyfinger_piano-d.mp3" ></audio>
+   <audio id="note5" src="sounds/68443_pinkyfinger_piano-e.mp3" ></audio>
+   <audio id="note6" src="sounds/68445_pinkyfinger_piano-f.mp3" ></audio>
+   <audio id="note7" src="sounds/68447_pinkyfinger_piano-g.mp3" ></audio>
+   <audio id="note8" src="sounds/68448_pinkyfinger_piano-g.mp3" ></audio>
+   <audio id="inventoryNew" src="sounds/inventoryNew.mp3" ></audio>
+   <audio id="inventoryNew2" src="sounds/inventoryNew.mp3" ></audio>
+   <audio id="unlockPadlock" src="sounds/door_lock.mp3" ></audio>
+   <audio id="useSaw" src="sounds/chopOff.mp3" ></audio>
+   <audio id="pictureFall" src="sounds/PictureFall.mp3" ></audio>
+   <audio id="squeakyDoor" src="sounds/door_creak_closing.mp3" ></audio>
+
+
+   <audio id="sound2" src="sounds/ratChew.mp3" ></audio>
+   <audio id="sound3" src="sounds/crackingBones.mp3" ></audio>
+   <audio id="sound4" src="sounds/creakyRope.wav" ></audio>
+   <audio id="sound5" src="sounds/claps3.mp3" ></audio>
+   <audio id="sound6" src="sounds/woscream4.mp3" ></audio>
+
+   <audio id="tvsmash" src="sounds/smash.mp3" ></audio>
+   <audio id="lockhit" src="sounds/whack.mp3" ></audio>
+   <audio id="lockdrop" src="sounds/dropfloor.mp3" ></audio>
+   <audio loop id="clock" src="sounds/clock.mp3" ></audio>
+   <audio loop id="backgroundMusic" src="sounds/doodle_0.mp3" ></audio>
+
+   <video id="video1"  style="display:none;" > <source src=videos/PianoCreepHandsOut.mp4 type=video/mp4></video>
+   <video id="video2"  style="display:none;" > <source src=videos/HandsIn.mp4 type=video/mp4></video>
+   <video id="video3"  style="display:none;" > <source src=videos/IntroVideo.mp4 type=video/mp4></video>
+   <video id="video4"  style="display:none;" > <source src=videos/HBO.mp4 type=video/mp4></video>
+   <video id="video5"  style="display:none;" > <source src=videos/hacksaw.mp4 type=video/mp4></video>
+   <video id="video6"  style="display:none;" > <source src=videos/tarantula.mp4 type=video/mp4></video>
+   <video id="video7"  style="display:none;" > <source src=videos/HandInHole.mp4 type=video/mp4></video>
+   <video id="video8"  style="display:none;" > <source src=videos/SpiderHands.mp4 type=video/mp4></video>
+   <video id="video9"  style="display:none;" > <source src=videos/End.mp4 type=video/mp4></video>
+   <video id="video10" style="display:none;" > <source src=videos/Cloaked.mp4 type=video/mp4></video>
+
+   <script>
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+   </script>
+
+   <script src="game.js"></script>
+   <script src="microphone.js"></script>
+   <script src="project.js"></script>
+  </body>
+</html>
