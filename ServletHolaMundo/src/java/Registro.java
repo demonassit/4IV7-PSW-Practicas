@@ -81,6 +81,7 @@ public class Registro extends HttpServlet {
                     + "<a href='index.html'>Regresar al Formulario</a>");
             out.println("</body>");
             out.println("</html>");
+            
         }
     }
 
