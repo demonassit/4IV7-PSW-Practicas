@@ -167,8 +167,8 @@ public class Registro extends HttpServlet {
                 out.println("</head>");
                 out.println("<body>"
                         + "<h1>No se pudo registrar, hubo un error</h1>"
-                        + "<a href='index.html'>Regresar al Formulario</a>"
-                        +");
+                        + "<a href='index.html'>Regresar al Formulario</a>");
+                        
             out.println("</body>");
             out.println("</html>");
             }
