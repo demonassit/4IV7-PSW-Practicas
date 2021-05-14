@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div class="container" >
+            <div class="containerRegistro" >
+                <form method="post" name="registroEmpleado" action="guardarEmpleado" >
+                    <table border="2" >
+                        <tr>
+                            <td>Nombre:</td>
+                            <td><input type="text" name="nombre" size="30" ></td>
+                        </tr>
+                        <tr>
+                            <td>Password:</td>
+                            <td><input type="password" name="password" size="30" ></td>
+                        </tr>
+                        <tr>
+                            <td>Email:</td>
+                            <td><input type="email" name="email" size="30" ></td>
+                        </tr>
+                        <tr>
+                            <td>Pais:</td>
+                            <td> <select name="pais" > 
+                                    <option>Mexico</option>
+                                    <option>Al que nadie quiere</option>
+                                    <option>Por ahi</option>
+                                    <option>En algun lugar</option>
+                                </select> </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" ><input type="submit"
+                                                    value="Registrar Empleado"></td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+            <br>
+            <div class="consultarEmpleados" >
+                <a href="consultarEmpleados.jsp">Consultar a todos los Empleados</a>     
+            </div>
+        </div>
+    </body>
+</html>
