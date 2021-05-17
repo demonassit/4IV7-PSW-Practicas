@@ -4,7 +4,7 @@
     Author     : demon
 --%>
 
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page contentType="text/html" pageEncoding="UTF-8" session="true" %>
 <!DOCTYPE html>
 <html>
     <head>
@@ -13,7 +13,18 @@
     </head>
     <body>
         <h1>Registro Exitoso</h1>
+        <%
+            HttpSession sesionCliente = request.getSession();
+            //la consulta  a bd para saber quien entro
+            //verificar_usuario(String user, String pass)
+            //loggin
+            //Empleado e = new Empleado()
+                                                   //e.
+            sesionCliente.setAttribute("Usuario", "Jorge");
+
+            %>
         <br>
+        Hola : <% out.println(sesionCliente.getAttribute("Usuario")); %>
         <a href="index.html" >Regresar al Menu Principal</a>
     </body>
 </html>
