@@ -11,6 +11,27 @@ and open the template in the editor.
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
-        <div>TODO write content</div>
+        <div class="container" >
+            <form method="post" name="loggin" action="VerificarUsuario" >
+                <h1>Inicio de Sesión</h1>        
+                <table border="2" >
+                    <tr>
+                        <td>Usuario:</td>
+                        <td> <input type="text" name="txtUsuario"
+                                    id="txtUsuario"> </td>
+                    </tr>
+                    <tr>
+                        <td>Password:</td>
+                        <td> <input type="password" name="txtPassword"
+                                    id="txtPassword"> </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><input type="submit" value="Ingresar"
+                                   id="btnloggin" name="btnloggin"></td>        
+                    </tr>
+                </table>
+            </form>
+        </div>
     </body>
 </html>
